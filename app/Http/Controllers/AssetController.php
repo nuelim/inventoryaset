@@ -1,14 +1,11 @@
 <?php
 
-// Buat controller ini dengan perintah:
-// php artisan make:controller ProductController --resource
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product; // (Anda perlu buat model ini)
 
-class ProductController extends Controller
+class AssetController extends Controller
 {
     /**
      * Menampilkan halaman daftar barang.
