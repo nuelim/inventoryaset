@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AssetController;
 use Spatie\FlareClient\View;
 
 /*
@@ -23,11 +23,8 @@ Route::get('/home-2', function () {
     return view('home-2');
 });
 
-// Rute untuk menampilkan form (dari add-product.html)
-Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::get('/asset/create', [AssetController::class, 'create'])->name('asset.create');
 
-// Rute untuk MENYIMPAN data dari form
-Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+Route::post('/asset', [assetController::class, 'store'])->name('asset.store');
 
-// Rute untuk menampilkan daftar barang (dari product-list.html)
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/asset', [AssetController::class, 'index'])->name('asset.index');
